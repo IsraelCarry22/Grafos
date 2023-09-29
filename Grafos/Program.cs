@@ -12,7 +12,6 @@ class Program
         Graph.AddRoutes("A", "B", 10);
         Graph.AddRoutes("B", "C", 5);
         Graph.AddRoutes("A", "C", 20);
-
         int distance = Graph.CalculateShortestRoute("A", "C");
         Console.WriteLine("La distancia más corta entre A y C es: " + distance);
         Console.WriteLine("=============================\n");
@@ -25,9 +24,7 @@ class Program
         Network.AddFriend("Usuario1", "Amigo2");
         Network.AddFriend("Usuario2", "Amigo2");
         Network.AddFriend("Usuario2", "Amigo3");
-
         List<string> Suggestions = Network.GetSuggestedFriends("Usuario1");
-
         Console.WriteLine("Amigos sugeridos para Usuario1:");
         foreach (var friend in Suggestions)
         {
@@ -42,9 +39,7 @@ class Program
         project.AddDependence("ModuloA", "ModuloB");
         project.AddDependence("ModuloB", "ModuloC");
         project.AddDependence("ModuloC", "ModuloA");
-
         bool Cycles = project.DependencyCycles();
-
         Console.WriteLine("El proyecto tiene ciclos de dependencia: " + Cycles);
         Console.WriteLine("=============================\n");
         #endregion
